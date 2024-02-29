@@ -33,7 +33,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter Contributers',
-        name: 'contributers'
+        name: 'contributors'
     },
     {
         type: 'list',
@@ -52,7 +52,15 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    generateMarkdown(data);
+    const filePath = '../';
+
+    fs.writeFile('README.md', generateMarkdown(data), (err) => {
+        if (err) {
+            console.log('error wriiting file: ', err);
+        }else {
+            console.log('creating markdown');
+        }
+    });
 }
 
 // TODO: Create a function to initialize app
