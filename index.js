@@ -16,7 +16,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter instalation notes: ',
-        name: 'instalation'
+        name: 'installation'
     },
     {
         type: 'input',
@@ -27,6 +27,11 @@ const questions = [
         type: 'input',
         message: 'Enter Github Username: ',
         name: 'username'
+    },
+    {
+        type: 'input',
+        message: 'Enter Github Repository Name: ',
+        name: 'repoName'
     },
     {
         type: 'input',
@@ -55,7 +60,7 @@ function writeToFile(fileName, data) {
         if (err) {
             console.log('error wriiting file: ', err);
         }else {
-            console.log('creating markdown');
+            console.log('creating markdown file');
         }
     });
 }

@@ -50,44 +50,57 @@ function renderLicenseLink(license) {
 
 function renderLicenseSection(license) {
   if(license) {
-    return `This project is licensed under the [${license}](${renderLicenseLink(license)}) license`
+    return `This project is licensed under the ${renderLicenseLink(license)}`
+  }
+}
+
+function generateGithubUrls(username, repoName){
+  if(username && repoName){
+    return `
+  [${username}'s Github Repository For this Project](https://www.github.com/${username}/${repoName})
+  
+  [${repoName}](https://${username}.github.io/${repoName})
+    `;
+  }else {
+    return `user failed to enter a user name or repository name`;
   }
 }
 
 function generateMarkdown(data) {
 
-  let {title, description, instalation, usage, username, contributors, license} = data;
+  let {title, description, installation, usage, username, repoName, contributors, license} = data;
 
   const licenseSection = renderLicenseSection(license);
   const licenseBadge = renderLicenseBadge(license);
+  const repoUrl = generateGithubUrls(username, repoName);
 
   return `# ${title}
 
-  ${licenseBadge}
+  ## ${licenseBadge}
 
-  ## Desctiption
+  ## Description
 
-  ${description}
+    ${description}
 
-  ## Instalation
+  ## Installation
 
-  ${instalation}
+    ${installation}
 
   ## Usage
 
-  ${usage}
+    ${usage}
 
-  ## Github Repository
+  ## Github Links
 
-  https://www.github.io/${username}
+  ${repoUrl}
 
   ## Contributers
 
-  ${contributors}
+    ${contributors}
 
   ## License
 
-  ${license}
+  ${licenseSection}
 
 `;
 }
