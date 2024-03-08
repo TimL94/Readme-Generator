@@ -78,6 +78,21 @@ function generateMarkdown(data) {
 
   ## ${licenseBadge}
 
+  ## Table of Contents
+
+ [Description](#description)
+
+ [Installation](#installation)
+
+ [Usage](#usage)
+
+ [GitHub Links](#github-links)
+
+ [Contributors](#contributors)
+
+ [License](#license)
+ 
+
   ## Description
 
     ${description}
