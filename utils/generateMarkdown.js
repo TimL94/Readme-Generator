@@ -109,7 +109,7 @@ function generateMarkdown(data) {
 
   ${repoUrl}
 
-  ## Contributers
+  ## Contributors
 
     ${contributors}
 
