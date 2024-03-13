@@ -68,7 +68,7 @@ function generateGithubUrls(username, repoName){
 
 function generateMarkdown(data) {
 
-  let {title, description, installation, usage, username, repoName, contributors, license} = data;
+  let {title, description, installation, usage, username, repoName, contributors, tests, questions, license} = data;
 
   const licenseSection = renderLicenseSection(license);
   const licenseBadge = renderLicenseBadge(license);
@@ -89,6 +89,10 @@ function generateMarkdown(data) {
  [GitHub Links](#github-links)
 
  [Contributors](#contributors)
+ 
+ [Tests](#tests)
+ 
+ [Questions](#questions)
 
  [License](#license)
  
@@ -113,6 +117,14 @@ function generateMarkdown(data) {
 
     ${contributors}
 
+  ## Tests
+
+    ${tests}
+
+  ## Questions
+
+    ${questions}
+    
   ## License
 
   ${licenseSection}

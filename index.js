@@ -39,6 +39,16 @@ const questions = [
         name: 'contributors'
     },
     {
+        type: 'input',
+        message: 'Enter tests: ',
+        name: 'tests'
+    },
+    {
+        type: 'input',
+        message: 'Enter Questions: ',
+        name: 'questions'
+    },
+    {
         type: 'list',
         message: 'Choose your projects license: ',
         name: 'license',

@@ -27,7 +27,7 @@
     Once the modules have been correctly downloaded the user must run the 'node index.js' command in the same file location. 
     This will start the program and allow the user to create their first README.md.
   
-  [Click here to watch the installation tutorial](./assets/Videos/instalation_tutorial.mp4)
+  [Click here to watch the installation tutorial](./assets/Videos/Tutorial.webm)
 
   ## Usage
 
@@ -48,4 +48,3 @@
   ## License
 
   This project is licensed under the [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)
-
